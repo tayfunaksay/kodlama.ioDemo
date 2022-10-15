@@ -7,6 +7,7 @@ import kodlama.ioDemo.core.logging.MailLogger;
 import kodlama.ioDemo.core.logging.interfaces.Logger;
 import kodlama.ioDemo.dataAccess.hibernate.HibernateCategoryDao;
 import kodlama.ioDemo.entities.Category;
+import kodlama.ioDemo.entities.Instructor;
 
 public class Main {
 
@@ -21,10 +22,13 @@ public class Main {
 		categoryManager.add(category1);
 		
 		
-		Category category2 = new Category(11,"Programlama");
+		Category category2 = new Category(11,"deneme kategori");
 
 		CategoryManager categoryManager2 = new CategoryManager(new HibernateCategoryDao(),loggers);
 		categoryManager2.add(category2);
+		
+		Instructor instructor =new Instructor(1, "Tayfun","Aksay","asdasd.url","açıklama");
+		
 		
 		
 	}

@@ -1,6 +1,8 @@
 package kodlama.ioDemo.entities;
 
-public class Course {
+import kodlama.ioDemo.entities.interfaces.Entity;
+
+public class Course implements Entity {
 
 	public Course() {
 

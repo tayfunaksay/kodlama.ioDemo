@@ -1,6 +1,8 @@
 package kodlama.ioDemo.entities;
 
-public class User {
+import kodlama.ioDemo.entities.interfaces.Entity;
+
+public class User implements Entity {
 
 	private int id;
 	private String firstName;

@@ -15,7 +15,7 @@ public class CourseManager {
 		this.loggers = loggers;
 
 	}
-
+	
 	public void add(Course course) throws Exception {
 
 		if (!isCourseNameExist(course) && !isCoursePriceCorrect(course)) {
@@ -37,7 +37,7 @@ public class CourseManager {
 
 			if (existCourse.getName() == course.getName()) {
 
-				throw new Exception("Aynı isimde yeni bir kurs kaydedilemez. İşlem başarısız.");
+				throw new Exception("Aynı isimde farklı bir kurs kaydedilemez. İşlem başarısız.");
 
 			}
 		}

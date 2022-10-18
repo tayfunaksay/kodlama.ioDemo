@@ -28,4 +28,11 @@ public class HibernateCategoryDao implements CategoryDao {
 		
 	}
 
+	@Override
+	public void update(Category category) {
+		
+		System.out.println("Kategori Hibernate ile güncellendi: " + category.getName());
+		
+	}
+
 }

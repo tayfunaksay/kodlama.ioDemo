@@ -6,5 +6,6 @@ public interface CategoryDao {
 	
 	void add(Category category);
 	Category[] getAll();
+	void update (Category category);
 
 }

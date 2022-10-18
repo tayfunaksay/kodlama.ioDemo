@@ -19,15 +19,13 @@ public class Main {
 		Category category1 = new Category(10,"Veri Tabanı Yönetimi");
 		
 		CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(),loggers);
-		categoryManager.add(category1);
+		categoryManager.update(category1);
 		
-		
-		Category category2 = new Category(11,"deneme kategori");
+		System.out.println("-----------------------------------");
+		Category category2 = new Category(11,"Programlama"); //Varolan bir kategori:Programlama
 
 		CategoryManager categoryManager2 = new CategoryManager(new HibernateCategoryDao(),loggers);
-		categoryManager2.add(category2);
-		
-		Instructor instructor =new Instructor(1, "Tayfun","Aksay","asdasd.url","açıklama");
+		categoryManager2.update(category2);
 		
 		
 		

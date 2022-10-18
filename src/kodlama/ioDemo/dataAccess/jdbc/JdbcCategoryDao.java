@@ -27,5 +27,12 @@ public class JdbcCategoryDao implements CategoryDao {
 
 		
 	}
+	
+	@Override
+	public void update(Category category) {
+		
+		System.out.println("Kategori JDBC ile güncellendi: " + category.getName());
+		
+	}
 
 }

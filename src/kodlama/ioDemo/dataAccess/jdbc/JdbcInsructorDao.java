@@ -1,7 +1,7 @@
 package kodlama.ioDemo.dataAccess.jdbc;
 
-import kodlama.ioDemo.dataAccess.interfaces.InstructorDao;
-import kodlama.ioDemo.entities.Instructor;
+import kodlama.ioDemo.dataAccess.abstracts.InstructorDao;
+import kodlama.ioDemo.entities.concretes.Instructor;
 
 public class JdbcInsructorDao implements InstructorDao {
 

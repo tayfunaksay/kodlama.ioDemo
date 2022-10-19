@@ -1,5 +1,4 @@
-package kodlama.ioDemo.entities;
-
+package kodlama.ioDemo.entities.concretes;
 
 public class Instructor extends User {
 

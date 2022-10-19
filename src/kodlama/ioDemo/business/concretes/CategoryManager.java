@@ -1,10 +1,13 @@
-package kodlama.ioDemo.business;
+package kodlama.ioDemo.business.concretes;
 
-import kodlama.ioDemo.core.logging.interfaces.Logger;
-import kodlama.ioDemo.dataAccess.interfaces.CategoryDao;
-import kodlama.ioDemo.entities.Category;
+import java.util.List;
 
-public class CategoryManager {
+import kodlama.ioDemo.business.abstracts.CategoryService;
+import kodlama.ioDemo.core.logging.abstracts.Logger;
+import kodlama.ioDemo.dataAccess.abstracts.CategoryDao;
+import kodlama.ioDemo.entities.concretes.Category;
+
+public class CategoryManager implements CategoryService {
 
 	CategoryDao categoryDao;
 	Logger[] loggers;
@@ -32,14 +35,9 @@ public class CategoryManager {
 
 	public void update(Category category) throws Exception {
 
-		Category[] existCategories = categoryDao.getAll();
-
-		for (Category existCategory : existCategories) {
-			if (existCategory.getName() == category.getName()) {
-
-				throw new Exception("Aynı isimde farklı bir kategori kaydedilemez. İşlem başarısız.");
-
-			}
+		
+		if (!isCategoryNameExist(category)) {
+			System.out.println("Doğrulama Hatası. Çoktan Exception fırlatmış olacak ve bu satıra giremeyecek.");
 		}
 
 		categoryDao.update(category);
@@ -52,9 +50,7 @@ public class CategoryManager {
 
 	public boolean isCategoryNameExist(Category category) throws Exception {
 
-		Category[] existCategories = categoryDao.getAll();
-
-		for (Category existCategory : existCategories) {
+		for (Category existCategory : categoryDao.getAll()) {
 
 			if (existCategory.getName() == category.getName()) {
 
@@ -64,6 +60,12 @@ public class CategoryManager {
 		}
 		return true;
 
+	}
+
+	@Override
+	public List<Category> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

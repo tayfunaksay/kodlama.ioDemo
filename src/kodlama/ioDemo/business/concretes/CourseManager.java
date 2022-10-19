@@ -1,10 +1,13 @@
-package kodlama.ioDemo.business;
+package kodlama.ioDemo.business.concretes;
 
-import kodlama.ioDemo.core.logging.interfaces.Logger;
-import kodlama.ioDemo.dataAccess.interfaces.CourseDao;
-import kodlama.ioDemo.entities.Course;
+import java.util.List;
 
-public class CourseManager {
+import kodlama.ioDemo.business.abstracts.CourseService;
+import kodlama.ioDemo.core.logging.abstracts.Logger;
+import kodlama.ioDemo.dataAccess.abstracts.CourseDao;
+import kodlama.ioDemo.entities.concretes.Course;
+
+public class CourseManager implements CourseService {
 
 	CourseDao courseDao;
 	Logger[] loggers;
@@ -18,22 +21,24 @@ public class CourseManager {
 	
 	public void add(Course course) throws Exception {
 
-		if (!isCourseNameExist(course) && !isCoursePriceCorrect(course)) {
+		if (!isCourseNameExist(course) || !isCoursePriceCorrect(course)) {
 			System.out.println("Doğrulama Hatası. Çoktan Exception fırlatmış olacak ve bu satıra giremeyecek.");
 		}
 
 		courseDao.add(course);
 
 		for (Logger logger : loggers) {
+			
 			logger.log(course.getName());
+			
 		}
 
 	}
 
 	public boolean isCourseNameExist(Course course) throws Exception {
-		Course[] existCourses = courseDao.getAll();
+		
 
-		for (Course existCourse : existCourses) {
+		for (Course existCourse : courseDao.getAll()) {
 
 			if (existCourse.getName() == course.getName()) {
 
@@ -51,6 +56,12 @@ public class CourseManager {
 		}
 		return true;
 
+	}
+
+	@Override
+	public List<Course> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

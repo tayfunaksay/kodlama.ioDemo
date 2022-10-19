@@ -1,13 +1,13 @@
 package kodlama.ioDemo;
 
-import kodlama.ioDemo.business.CategoryManager;
-import kodlama.ioDemo.core.logging.DatabaseLogger;
-import kodlama.ioDemo.core.logging.FileLogger;
-import kodlama.ioDemo.core.logging.MailLogger;
-import kodlama.ioDemo.core.logging.interfaces.Logger;
+import kodlama.ioDemo.business.concretes.CategoryManager;
+import kodlama.ioDemo.core.logging.abstracts.Logger;
+import kodlama.ioDemo.core.logging.concretes.DatabaseLogger;
+import kodlama.ioDemo.core.logging.concretes.FileLogger;
+import kodlama.ioDemo.core.logging.concretes.MailLogger;
 import kodlama.ioDemo.dataAccess.hibernate.HibernateCategoryDao;
-import kodlama.ioDemo.entities.Category;
-import kodlama.ioDemo.entities.Instructor;
+import kodlama.ioDemo.entities.concretes.Category;
+import kodlama.ioDemo.entities.concretes.Instructor;
 
 public class Main {
 

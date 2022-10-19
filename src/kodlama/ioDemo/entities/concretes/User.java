@@ -1,6 +1,6 @@
-package kodlama.ioDemo.entities;
+package kodlama.ioDemo.entities.concretes;
 
-import kodlama.ioDemo.entities.interfaces.Entity;
+import kodlama.ioDemo.core.entities.Entity;
 
 public class User implements Entity {
 

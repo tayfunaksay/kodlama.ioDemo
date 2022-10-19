@@ -1,6 +1,6 @@
-package kodlama.ioDemo.core.logging;
+package kodlama.ioDemo.core.logging.concretes;
 
-import kodlama.ioDemo.core.logging.interfaces.Logger;
+import kodlama.ioDemo.core.logging.abstracts.Logger;
 
 public class FileLogger implements Logger {
 

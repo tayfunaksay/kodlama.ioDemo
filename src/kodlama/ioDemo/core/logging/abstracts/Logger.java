@@ -1,4 +1,4 @@
-package kodlama.ioDemo.core.logging.interfaces;
+package kodlama.ioDemo.core.logging.abstracts;
 
 public interface Logger {
 	

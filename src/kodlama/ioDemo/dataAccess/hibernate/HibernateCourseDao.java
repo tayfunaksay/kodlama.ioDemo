@@ -1,10 +1,15 @@
 package kodlama.ioDemo.dataAccess.hibernate;
 
-import kodlama.ioDemo.dataAccess.interfaces.CourseDao;
-import kodlama.ioDemo.entities.Course;
+import java.util.List;
+
+import kodlama.ioDemo.dataAccess.abstracts.CourseDao;
+import kodlama.ioDemo.entities.concretes.Course;
 
 public class HibernateCourseDao implements CourseDao {
 
+
+	List<Course> courses;
+	
 	@Override
 	public void add(Course course) {
 
@@ -13,7 +18,7 @@ public class HibernateCourseDao implements CourseDao {
 	}
 
 	@Override
-	public Course[] getAll() {   // Burada new lenen Course lar veritabanından geliyor gibi kabul etmek içindir.
+	public List<Course> getAll() {   // Burada new lenen Course lar veritabanından geliyor gibi kabul etmek içindir.
 		
 		Course course1 = new Course();
 		course1.setName("Java Kampı");
@@ -24,8 +29,9 @@ public class HibernateCourseDao implements CourseDao {
 		Course course3 = new Course();
 		course3.setName("İngilizce Kampı");
 		
-		Course[] courses = new Course[] {course1,course2,course3};
-
+		courses.add(course1);
+		courses.add(course2);
+		courses.add(course3);
 		
 		return courses;
 	}

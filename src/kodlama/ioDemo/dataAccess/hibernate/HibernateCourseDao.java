@@ -1,5 +1,6 @@
 package kodlama.ioDemo.dataAccess.hibernate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import kodlama.ioDemo.dataAccess.abstracts.CourseDao;
@@ -8,7 +9,7 @@ import kodlama.ioDemo.entities.concretes.Course;
 public class HibernateCourseDao implements CourseDao {
 
 
-	List<Course> courses;
+	List<Course> courses = new ArrayList<Course>();
 	
 	@Override
 	public void add(Course course) {

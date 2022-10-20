@@ -1,5 +1,6 @@
 package kodlama.ioDemo.dataAccess.jdbc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import kodlama.ioDemo.dataAccess.abstracts.CourseDao;
@@ -7,7 +8,7 @@ import kodlama.ioDemo.entities.concretes.Course;
 
 public class JdbcCourseDao implements CourseDao {
 
-	List<Course> courses;
+	List<Course> courses = new ArrayList<Course>();
 	
 	@Override
 	public void add(Course course) {

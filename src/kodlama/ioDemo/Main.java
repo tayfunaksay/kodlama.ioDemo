@@ -7,7 +7,6 @@ import kodlama.ioDemo.core.logging.concretes.FileLogger;
 import kodlama.ioDemo.core.logging.concretes.MailLogger;
 import kodlama.ioDemo.dataAccess.hibernate.HibernateCategoryDao;
 import kodlama.ioDemo.entities.concretes.Category;
-import kodlama.ioDemo.entities.concretes.Instructor;
 
 public class Main {
 

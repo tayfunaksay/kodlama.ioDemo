@@ -1,5 +1,6 @@
 package kodlama.ioDemo.dataAccess.jdbc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import kodlama.ioDemo.dataAccess.abstracts.CategoryDao;
@@ -7,7 +8,7 @@ import kodlama.ioDemo.entities.concretes.Category;
 
 public class JdbcCategoryDao implements CategoryDao {
 	
-	List<Category> categories;	
+	List<Category> categories = new ArrayList<Category>();
 
 	@Override
 	public void add(Category category) {

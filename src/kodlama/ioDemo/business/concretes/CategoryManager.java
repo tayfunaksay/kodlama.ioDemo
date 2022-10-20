@@ -49,6 +49,8 @@ public class CategoryManager implements CategoryService {
 	}
 
 	public boolean isCategoryNameExist(Category category) throws Exception {
+		
+		
 
 		for (Category existCategory : categoryDao.getAll()) {
 
